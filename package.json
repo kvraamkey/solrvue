@@ -1,6 +1,19 @@
 {
+    "name": "@kvraamkey/solr-view",
+    "version": "1.0.0",
+    "description": "ui component for react",
+    "author": "Ramki A <kvraamkeydev@gmail.com>",
+    "license": "MIT",
+    "maintainers": [
+        "Ramki A <kvraamkeydev@gmail.com>"
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:kvraamkey/solr-view.git"
+        }
+    ],
     "homepage": "https://kvraamkey.github.io/solr-view/",
-    "private": true,
     "scripts": {
         "start": "snowpack dev",
         "build": "snowpack build",

@@ -1,12 +1,12 @@
 export default {
     mount: {
         public: '/',
-        src: '/_dist'
+        src: '/dist'
     },
     alias: {
         '@src': './src',
         '@components': './src/_components',
-        '@page': './src/_pages',
+        '@pages': './src/_pages',
     },
     plugins: [
         '@snowpack/plugin-svelte', '@snowpack/plugin-dotenv', '@snowpack/plugin-postcss'
