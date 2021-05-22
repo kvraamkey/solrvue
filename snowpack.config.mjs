@@ -9,13 +9,14 @@ export default {
         '@pages': './src/_pages',
     },
     plugins: [
-        '@snowpack/plugin-svelte', '@snowpack/plugin-dotenv', '@snowpack/plugin-postcss'
+        '@snowpack/plugin-svelte', '@snowpack/plugin-dotenv',
+        '@snowpack/plugin-postcss'
     ],
     routes: [],
     optimize: {
         bundle: true,
         minify: true,
-        target: 'es2018',
+        target: 'es2017',
         sourcemap: false
     },
     packageOptions: {},
