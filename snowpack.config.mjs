@@ -6,7 +6,7 @@ export default {
     alias: {
         '@src': './src',
         '@components': './src/_components',
-        '@pages': './src/_pages',
+        '@pages': './src/pages',
     },
     plugins: [
         '@snowpack/plugin-svelte', '@snowpack/plugin-dotenv',
