@@ -1,3 +1,8 @@
 import { writable } from 'svelte/store';
 
-export const url = writable('dashboard');
+const store = writable({
+    activePage: 'Dashboard',
+    isConnected : false
+});
+
+export default store;
