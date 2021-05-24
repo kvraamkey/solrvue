@@ -4,20 +4,14 @@
     let collections = [];
 
     onMount(async () => {
-        try {
-            const response = await fetch('http://10.64.4.29:8983/solr/azure_optix/select?q=*%3A*', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Basic c29scmFkbWluOnNvbHJAZG1pbkAyMDIx',
-                },
-            });
-            console(await response.json());
-        } catch (error) {
-            console.log(error);
-        }
+        
     });
 
 </script>
+
+<svelte:head>
+	<title>Collections</title>
+</svelte:head>
 
 <section class="flex w-full h-full space-x-3">
     <div class="flex-initial flex flex-col bg-white w-1/6 rounded-lg shadow-xl overflow-hidden">
