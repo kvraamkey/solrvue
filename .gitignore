@@ -1,4 +1,29 @@
-.snowpack
-build
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
 node_modules
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# build output
+dist
+build
+
+# Editor directories and files
+.idea
+.vscode
+.snowpack
 *.http
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
