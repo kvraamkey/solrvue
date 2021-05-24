@@ -17,7 +17,7 @@
     "scripts": {
         "start": "snowpack dev",
         "build": "snowpack build",
-        "deploy": "gh-pages -d build",
+        "deploy": "gh-pages -d build -m published",
         "format": "prettier --write '!**/*.{js,svelte,json,html}'",
         "test": "echo \"This template does not include a test runner by default.\" && exit 1"
     },
