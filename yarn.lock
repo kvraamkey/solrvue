@@ -6613,6 +6613,11 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
+tinro@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/tinro/-/tinro-0.6.4.tgz#b775dcfc071ccdd13466a73bc7a0ccded2e38777"
+  integrity sha512-ohZJ2uE/yvAM+12rDZeOkvSQanRw47IahnyvNsuOA80ZwkOnkpmb1q8b37i6Wo+ZNajiePa0mQo6BS/0oaEejQ==
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
