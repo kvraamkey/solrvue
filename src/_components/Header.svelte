@@ -1,5 +1,5 @@
 <script>
-    import store from '@src/_store';
+    import store from '@store';
     import { router, active } from 'tinro';
 
     function logout() {

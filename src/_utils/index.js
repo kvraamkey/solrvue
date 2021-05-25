@@ -1,5 +1,5 @@
 import { router } from "tinro";
-import store from '@src/_store';
+import store from '@store';
 
 export const getUrlParam = (key) => {
     const urlParams = new URLSearchParams(window.location.search);
