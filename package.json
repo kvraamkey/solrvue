@@ -1,42 +1,17 @@
 {
-    "name": "@kvraamkey/solr-view",
-    "version": "1.0.0",
-    "description": "ui component for react",
-    "homepage": "https://kvraamkey.github.io/solr-view/",
-    "author": "Ramki A <kvraamkeydev@gmail.com>",
-    "license": "MIT",
-    "maintainers": [
-        "Ramki A <kvraamkeydev@gmail.com>"
-    ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:kvraamkey/solr-view.git"
-        }
-    ],
-    "scripts": {
-        "start": "snowpack dev",
-        "build": "snowpack build",
-        "deploy": "gh-pages -d build -m published",
-        "format": "prettier --write '!**/*.{js,svelte,json,html}'",
-        "test": "echo \"This template does not include a test runner by default.\" && exit 1"
-    },
-    "devDependencies": {
-        "@snowpack/plugin-dotenv": "^2.1.0",
-        "@snowpack/plugin-postcss": "^1.4.0",
-        "@snowpack/plugin-svelte": "^3.7.0",
-        "@snowpack/plugin-webpack": "^2.3.1",
-        "autoprefixer": "^10.2.5",
-        "gh-pages": "^3.1.0",
-        "postcss": "^8.3.0",
-        "postcss-cli": "^8.3.1",
-        "prettier": "^2.3.0",
-        "snowpack": "^3.0.1",
-        "tailwindcss": "^2.1.2",
-        "tinro": "^0.6.4"
-    },
-    "dependencies": {
-        "svelte": "^3.38.2"
-    },
-    "browserslist": ">0.75%, not ie 11, not UCAndroid >0, not OperaMini all"
+  "name": "solrvue",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.10",
+    "svelte": "^3.38.2",
+    "tinro": "^0.6.4",
+    "vite": "^2.3.3",
+    "vite-plugin-windicss": "^0.16.0",
+    "windicss": "^3.0.12"
+  }
 }
