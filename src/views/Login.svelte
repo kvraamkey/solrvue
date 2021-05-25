@@ -1,9 +1,9 @@
 <script>
-    import store from '@src/_store';
+    import store from '@store';
     import { router } from 'tinro';
 
     function navigation() {
-        sessionStorage.setItem('sessionStarted', true);
+        sessionStorage.setItem('sessionStarted', JSON.stringify(true));
         store.update((self) => {
             self.isConnected = true;
             return self;

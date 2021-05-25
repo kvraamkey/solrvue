@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-    import { checkAuth } from '@src/_utils';
-    import Error from '../_components/Error.svelte';
+    import { checkAuth } from '@utils';
+    import Error from '@components/Error.svelte';
 
     let collections = [];
 

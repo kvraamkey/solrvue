@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { checkAuth } from '@src/_utils';
+    import { checkAuth } from '@utils';
     import Error from '@components/Error.svelte';
 
     onMount(async () => {
