@@ -1,17 +1,35 @@
 {
-  "name": "solrvue",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.10",
-    "svelte": "^3.38.2",
-    "tinro": "^0.6.4",
-    "vite": "^2.3.3",
-    "vite-plugin-windicss": "^0.16.0",
-    "windicss": "^3.0.12"
-  }
+    "name": "@kvraamkey/solr-view",
+    "version": "1.0.0",
+    "description": "ui component for react",
+    "homepage": "https://kvraamkey.github.io/solr-view/",
+    "author": "Ramki A <kvraamkeydev@gmail.com>",
+    "license": "MIT",
+    "maintainers": [
+        "Ramki A <kvraamkeydev@gmail.com>"
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:kvraamkey/solr-view.git"
+        }
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "deploy": "gh-pages -d build -m published",
+        "format": "prettier --write '**/*.{js,svelte,json,html}'",
+        "test": "echo \"This template does not include a test runner by default.\" && exit 1"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.10",
+        "gh-pages": "^3.2.0",
+        "prettier": "^2.3.0",
+        "svelte": "^3.38.2",
+        "tinro": "^0.6.4",
+        "vite": "^2.3.3",
+        "vite-plugin-windicss": "^0.16.0",
+        "windicss": "^3.0.12"
+    }
 }
