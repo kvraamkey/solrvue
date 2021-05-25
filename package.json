@@ -18,7 +18,7 @@
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "deploy": "gh-pages -d build -m published",
+        "deploy": "gh-pages -d dist -m published",
         "format": "prettier --write '**/*.{js,svelte,json,html}'",
         "test": "echo \"This template does not include a test runner by default.\" && exit 1"
     },
