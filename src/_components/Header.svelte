@@ -16,7 +16,7 @@
 <header class="header flex-initial flex items-center justify-between w-full px-2 bg-white h-12 shadow">
     <div class="flex-initial flex items-center space-x-3">
         <img class="w-8" src="./logo.png" alt="" />
-        <span class="text-xl tracking-widest">Solr-Vue</span>
+        <span class="text-stroke-md text-transparent opacity-75 overflow-hidden text-stroke-red-600 text-2xl tracking-widest">SolrVue</span>
     </div>
     <div class="flex items-center">
         <span class="relative inline-flex">
