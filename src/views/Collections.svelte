@@ -73,9 +73,24 @@
                 </div>
             </div>
             <div class="flex-1 overflow-auto">
-                {#each [...Array(100)] as i}
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi molestias delectus omnis fuga sequi architecto ipsum dolorum distinctio est voluptatibus nulla, dignissimos illum magnam eos alias consequatur consectetur voluptas voluptatum?</p>
-                {/each}
+                <div class="table w-full">
+                    <div class="table-header-group">
+                        <div class="table-row">
+                            <div class="table-cell sticky top-0 p-1 shadow shadow-dark-700 font-medium">Items</div>
+                            <div class="table-cell sticky top-0 p-1 shadow shadow-dark-700 font-medium">Expenditure</div>
+                        </div>
+                    </div>
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell border-b p-1.5">Donuts</div>
+                            <div class="table-cell border-b p-1.5">3,000</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell border-b p-1.5">Stationery</div>
+                            <div class="table-cell border-b p-1.5">18,000</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="flex-initial bg-gray-100 p-2">
                 <div class="table-row">
