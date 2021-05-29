@@ -1,5 +1,5 @@
 'use strict';
 
-const app = require('./server');
+const app = require('./server/app');
 
-app.listen(3000, () => console.log('Local app listening on port 3000!'));
+app.listen(5555, () => console.log('Local app listening on port 5555!'));
