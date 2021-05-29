@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { router } from "tinro";
 import store from '@store';
 
@@ -12,7 +13,8 @@ export const toCamelCase = (string) => {
 
 export const checkAuth = () => {
     const sessionStarted = JSON.parse(sessionStorage.getItem('sessionStarted')) || false;
-    if (!sessionStarted) {
+    const credentials = sessionStorage.getItem('credentials')
+    if (!sessionStarted || !credentials) {
         router.goto('/login');
     } else {
         store.update((self) => {

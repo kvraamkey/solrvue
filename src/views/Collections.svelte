@@ -1,14 +1,21 @@
 <script>
     // @ts-nocheck
-
     import { onMount } from 'svelte';
     import { checkAuth } from '@/_utils';
     import Error from '@components/Error.svelte';
 
     let collections = [];
 
+    const credentials = JSON.parse(sessionStorage.getItem('credentials'));
+
     onMount(async () => {
         checkAuth();
+        const request = await fetch('http://localhost:5555/get', {
+            headers: { ...credentials },
+        });
+        const response = await request.json();
+        collections = response.collections;
+        console.log(response);
     });
 
 </script>
