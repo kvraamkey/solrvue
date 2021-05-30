@@ -9,10 +9,6 @@
 
 </script>
 
-<svelte:head>
-    <title>Dashboard</title>
-</svelte:head>
-
 <section class="flex h-full">
     <Error message="Coming Soon" />
 </section>

@@ -1,28 +1,24 @@
 <script>
     // @ts-nocheck
     import { onMount } from 'svelte';
-    import { checkAuth } from '@/_utils';
+    import { checkAuth, fetchApi } from '@/_utils';
     import Error from '@components/Error.svelte';
+    import { router } from 'tinro';
 
-    let collections = [];
-
-    const credentials = JSON.parse(sessionStorage.getItem('credentials'));
+    let collections = fetchApi('collections', 'listing');
+    let collection = undefined
 
     onMount(async () => {
         checkAuth();
-        const request = await fetch('http://localhost:5555/get', {
-            headers: { ...credentials },
-        });
-        const response = await request.json();
-        collections = response.collections;
-        console.log(response);
+        collection = router.location.query.set('c', active_collection)
     });
 
-</script>
+    const handleCollection = (active_collection) => {
+        collection = active_collection
+        router.location.query.set('c', active_collection); //URL: /foo?name=alex
+    };
 
-<svelte:head>
-    <title>Collections</title>
-</svelte:head>
+</script>
 
 <section class="flex w-full h-full space-x-3">
     <div class="flex-initial flex flex-col bg-white w-1/6 rounded-lg shadow-xl overflow-hidden">
@@ -31,17 +27,23 @@
             <p class="text-sm text-gray-500">Personal details and application.</p>
         </div>
         <div class="flex-1 flex flex-col overflow-auto">
-            {#each collections as collection}
-                <div class="flex cursor-pointer hover:bg-gray-100 space-y-1 py-2 px-3 border-b">
-                    <p class="text-gray-600">{collection}</p>
-                </div>
-            {:else}
-                <Error message="there is no collection or alias" />
-            {/each}
+            {#await collections}
+                <p>...loading</p>
+            {:then collections}
+                {#each collections.data as index}
+                    <div on:click={() => handleCollection(index)} class:bg-gray-100={collection === index} class="flex cursor-pointer hover:bg-gray-100 space-y-1 py-2 px-3 border-b">
+                        <p class="text-gray-600">{index}</p>
+                    </div>
+                {:else}
+                    <Error message="there is no collection or alias" />
+                {/each}
+            {:catch error}
+                <Error message={error.message} />
+            {/await}
         </div>
     </div>
     <div class="flex-1 flex flex-col bg-white rounded-lg shadow-xl">
-        <header class="flex-initial flex items-center justify-between border-b py-2 px-3">
+        <header class="flex-initial bg-gray-50 flex items-center justify-between border-b py-2 px-3">
             <h2 class="sc-fzoLsD fYZyZu">Collection Name</h2>
             <div class="flex items-center justify-center space-x-3">
                 <span class="cursor-pointer inline-flex items-center justify-center">

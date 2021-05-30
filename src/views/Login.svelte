@@ -19,10 +19,6 @@
 
 </script>
 
-<svelte:head>
-    <title>Login</title>
-</svelte:head>
-
 <section class="flex items-center justify-center h-full mx-auto" style={{ width: 500 }}>
     <div class="bg-white w-full shadow-xl rounded p-5">
         <img class="w-8" src="./logo.png" alt="" />

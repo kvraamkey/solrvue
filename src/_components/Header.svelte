@@ -2,6 +2,7 @@
     import store from '@store';
     import { router, active } from 'tinro';
 
+    const url = JSON.parse(sessionStorage.getItem('credentials'))
     function logout() {
         sessionStorage.clear();
         store.update((self) => {
@@ -20,7 +21,7 @@
     </div>
     <div class="flex items-center">
         <span class="relative inline-flex">
-            <span class="inline-flex tracking-wider items-center px-3 py-1 font-medium text-green-600"> http://127.0.0.1:8080/solr </span>
+            <span class="inline-flex tracking-wider items-center px-3 py-1 font-medium text-green-600"> {url?.solr_url} </span>
             <span class="flex absolute h-3 w-3 -top-0.5 right-0">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500" />

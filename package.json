@@ -26,7 +26,6 @@
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.10",
         "gh-pages": "^3.2.0",
-        "nodemon": "^2.0.7",
         "prettier": "^2.3.0",
         "svelte": "^3.38.2",
         "tinro": "^0.6.4",
@@ -34,10 +33,5 @@
         "vite-plugin-windicss": "^0.16.0",
         "windicss": "^3.0.12"
     },
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "got": "^11.8.2",
-        "serverless-http": "^2.7.0"
-    }
+    "dependencies": {}
 }
